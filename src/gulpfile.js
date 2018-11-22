@@ -20,7 +20,7 @@ function minhtml () {
 }
 
 function mincss () {
-	return gulp.src('src/less/*.less')
+	return gulp.src('src/less/*')
 		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sourcemaps.identityMap())
 		.pipe(postcss([
