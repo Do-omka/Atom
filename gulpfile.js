@@ -62,7 +62,7 @@ function minimg () {
 }
 
 function watchhtml () {
-	return gulp.watch('src/*.html', minhtml)
+	return gulp.watch(['src/*.html', 'src/templates/*.html'], minhtml)
 }
 
 function watchcss () {
