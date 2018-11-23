@@ -74,4 +74,4 @@ function watchjs () {
 }
 
 gulp.task('default', gulp.series(minhtml, mincss, minjs, gulp.parallel(watchhtml, watchcss, watchjs)))
-gulp.task(minimg);
+gulp.task(minimg)
