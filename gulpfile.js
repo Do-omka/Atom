@@ -1,4 +1,3 @@
-'use strict'
 const
 	gulp = require('gulp')
 	,sourcemaps = require('gulp-sourcemaps')
@@ -11,6 +10,7 @@ const
 	,concat = require('gulp-concat')
 	,del = require('del')
 	,rigger = require('gulp-rigger')
+	,babel = require('gulp-babel')
 
 function minhtml () {
 	return gulp.src('src/*.html')
@@ -20,8 +20,11 @@ function minhtml () {
 }
 
 function mincss () {
-	return gulp.src('src/less/*')
-		.pipe(sourcemaps.init({loadMaps: true}))
+	return gulp.src(['src/less/!(main.less)*', 'src/less/*'])
+		.pipe(sourcemaps.init({
+			loadMaps: true
+			,largeFile: true
+		}))
 		.pipe(sourcemaps.identityMap())
 		.pipe(postcss([
 			require('postcss-svgo')
@@ -42,12 +45,19 @@ function mincss () {
 
 function minjs (cb) {
 	pump([
-		gulp.src('src/js/*.js')
-			.pipe(sourcemaps.init())
-			.pipe(concat('main.js'))
+		gulp.src(['src/js/!(main.js)*.js', 'src/js/*.js'])
+			.pipe(sourcemaps.init({
+				loadMaps: true
+				,largeFile: true
+			}))
 			.pipe(sourcemaps.identityMap())
+			.pipe(concat('main.js'))
+			.pipe(babel({
+				presets: ['@babel/env']
+			}))
 			.pipe(jsmin())
 			.pipe(sourcemaps.write(''))
+			.pipe(gulp.dest('docs/js'))
 		,gulp.dest('docs/js')
 	],
 	cb
