@@ -36,9 +36,9 @@ function mincss () {
 		.pipe(postcss([
 			require('postcss-inline-svg')
 			,require('autoprefixer')
-			,require('postcss-csso')
 			,require('postcss-focus')
 			,require('postcss-svgo')
+			,require('postcss-csso')
 		]))
 		.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('docs/css'))
