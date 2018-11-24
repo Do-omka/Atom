@@ -20,23 +20,25 @@ function minhtml () {
 }
 
 function mincss () {
-	return gulp.src(['src/less/!(main.less)*', 'src/less/*'])
+	return gulp.src(['src/less/!(main.less)*', 'src/less/*', '!src/less/**.del'])
 		.pipe(sourcemaps.init({
 			loadMaps: true
 			,largeFile: true
 		}))
 		.pipe(sourcemaps.identityMap())
-		.pipe(postcss([
-			require('postcss-svgo')
-		]
-		,{syntax: require('postcss-less')}
-		))
+		// .pipe(postcss([
+		// 	require('postcss-svgo')
+		// ]
+		// ,{syntax: require('postcss-less')}
+		// ))
 		.pipe(concat('main.css'))
 		.pipe(less())
 		.pipe(postcss([
-			require('autoprefixer')
+			require('postcss-inline-svg')
+			,require('autoprefixer')
 			,require('postcss-csso')
 			,require('postcss-focus')
+			,require('postcss-svgo')
 		]))
 		.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('docs/css'))
@@ -76,7 +78,7 @@ function watchhtml () {
 }
 
 function watchcss () {
-	return gulp.watch('src/less/*.less', mincss)
+	return gulp.watch('src/less/', mincss)
 }
 
 function watchjs () {
