@@ -14,8 +14,10 @@ input:active {
 }
 
 button,
+button:active,
 button:hover,
-button:active {
+button:focus, {
+	box-shadow: none;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -30,8 +32,15 @@ ol, ul {
 
 a,
 a:hover,
-a:active {
+a:active,
+a:focus {
 	text-decoration: none;
+	color: inherit;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
 	color: inherit;
 }
 
@@ -329,4 +338,47 @@ section {
 		//	font-size:
 		}
 	}
+}
+
+.news {
+	.slider {
+		position: relative;
+		.prev,
+		.next {
+			position: absolute;
+			width: 23px;
+			height: 23px;
+			border: solid #3742fa;
+			border-width: 0 4px 4px 0;
+			transform: translateY(-50%);
+			top: 175px;
+			z-index: 10000000;
+		}
+		.prev {
+			left: -10px;
+			transform: translate(-50%, -50%) rotate(135deg);
+		}
+		.next {
+			right: -10px;
+			transform: translate(50%, -50%) rotate(-45deg);
+		}
+		.showcase {
+			overflow: hidden;
+			flex-wrap: nowrap;
+			.article {
+				h2 {
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+}
+
+img.mask {
+	border-radius: 15px;
+}
+
+.popup {
+	display: none;
 }

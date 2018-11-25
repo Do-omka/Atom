@@ -35,8 +35,8 @@ function mincss () {
 		.pipe(less())
 		.pipe(postcss([
 			require('postcss-inline-svg')
-			,require('autoprefixer')
 			,require('postcss-focus')
+			,require('autoprefixer')
 			,require('postcss-svgo')
 			,require('postcss-csso')
 		]))
