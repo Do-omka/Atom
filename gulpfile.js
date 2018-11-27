@@ -34,7 +34,8 @@ function mincss () {
 		.pipe(concat('main.css'))
 		.pipe(less())
 		.pipe(postcss([
-			require('postcss-inline-svg')
+			require('postcss-font-magician')
+			,require('postcss-inline-svg')
 			,require('postcss-focus')
 			,require('autoprefixer')
 			,require('postcss-svgo')
