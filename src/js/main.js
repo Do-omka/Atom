@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		return el
 	}
 	
+	// fixed header
+	document.querySelector('body > header').style.marginTop = getComputedStyle(document.querySelector('body > header nav')).getPropertyValue('height')
+	
+	document.querySelector('body > header nav').style.position = 'fixed'
+	document.querySelector('body > header nav').style.zIndex = '1'
+	document.querySelector('body > header nav').style.top = '0'
+	document.querySelector('body > header nav').style.width = '100%'
+	
+	// recall popup
 	let recalls = document.querySelectorAll('.recall')
 	for (let i = 0; i < recalls.length; i++) {
 		recalls[i].addEventListener('click', (e)=> {
@@ -13,6 +22,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		})
 	}
 	
+	// close buttons
 	let close = document.querySelectorAll('.close')
 	for (let i = 0; i < close.length; i++) {
 		close[i].addEventListener('click', (e)=> {
@@ -22,6 +32,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		})
 	}
 	
+	//close popup on click outside
 	let popup_close = document.querySelectorAll('.popup')
 	for (let i = 0; i < popup_close.length; i++) {
 		popup_close[i].addEventListener('click', (e)=> {
@@ -34,6 +45,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		e.stopPropagation()
 	})
 	
+	// city select drop down
 	document.querySelector('.city_select .select').addEventListener('click', (e)=> {
 		e.stopPropagation()
 	})
