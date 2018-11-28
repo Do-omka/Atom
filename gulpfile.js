@@ -26,11 +26,11 @@ function mincss () {
 			,largeFile: true
 		}))
 		.pipe(sourcemaps.identityMap())
-		// .pipe(postcss([
-		// 	require('postcss-svgo')
-		// ]
-		// ,{syntax: require('postcss-less')}
-		// ))
+		.pipe(postcss([
+			require('postcss-svgo')
+		]
+		,{syntax: require('postcss-less')}
+		))
 		.pipe(concat('main.css'))
 		.pipe(less())
 		.pipe(postcss([

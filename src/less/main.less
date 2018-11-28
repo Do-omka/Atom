@@ -209,13 +209,26 @@ body > header {
 			margin-bottom: 1.25rem;
 		}
 		.city_select {
+			&.active {
+				.select {
+					.f;
+				}
+			}
+			&.inactive {
+				> p::after {
+					transform: rotate(90deg);
+				}
+				.select {
+					display: none;
+					
+				}
+			}
 			.f;
 			align-items: flex-end;
-			display: none;
 			position: relative;
 			font-weight: normal;
 			color: rgb(62, 62, 73);
-			p {
+			> p {
 				display: flex;
 				align-items: center;
 				cursor: pointer;
@@ -239,7 +252,6 @@ body > header {
 				position: absolute;
 				z-index: 1;
 				background-color: #fff;
-				//display: none;
 				top: 100%;
 				width: 243px;
 				border: 1px solid #dfe3e9;
@@ -410,14 +422,18 @@ img.mask {
 }
 
 .popup {
-	.f;
+	&.active {
+		.f;
+	}
+	&.inactive {
+		display: none;
+	}
 	justify-content: center;
 	z-index: 1;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	top:0;
-	display: none!important;
 	
 	form {
 		position: relative;
@@ -464,6 +480,7 @@ img.mask {
 			width: 15px;
 			height: 15px;
 			opacity: 0.5;
+			cursor: pointer;
 			&:hover {
 				opacity: 1;
 			}
