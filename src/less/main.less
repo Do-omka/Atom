@@ -394,21 +394,35 @@ section {
 			border-width: 0 4px 4px 0;
 			transform: translateY(-50%);
 			top: 175px;
-			z-index: 10000000;
+			z-index: 1;
 		}
 		.prev {
 			left: -10px;
 			transform: translate(-50%, -50%) rotate(135deg);
+			@media (max-width: 576px) {
+				left: 10px;
+			}
 		}
 		.next {
 			right: -10px;
 			transform: translate(50%, -50%) rotate(-45deg);
+			@media (max-width: 576px) {
+				right: 10px;
+			}
 		}
 		.showcase {
 			overflow: hidden;
 			flex-wrap: nowrap;
-			.article {
-				h2 {
+			article.article {
+				flex-shrink: 0;
+				figure.preview {
+					.f;
+					align-items: center;
+					img {
+						margin-bottom: 0.75rem;
+					}
+				}
+				figcaption {
 					overflow: hidden;
 					text-overflow: ellipsis;
 				}
@@ -651,7 +665,7 @@ section.partners {
 	
 	.item {
 		position: relative;
-		@media(max-width: 1200px) {
+		@media (max-width: 1200px) {
 			.promo {
 				height: 250px;
 			}
@@ -669,7 +683,7 @@ section.partners {
 			box-shadow: 0 3px 12px 1px rgba(209, 209, 209, 0.5);
 			background-color: #f7faff;
 			z-index: -1;
-			@media(max-width: 1200px) {
+			@media (max-width: 1200px) {
 				left: 0;
 				top: 100px;
 			}
