@@ -101,7 +101,7 @@ h3 {
 .btn:active,
 .btn:focus {
 	font-size: 0.9rem;
-  font-weight: 500;
+	font-weight: 500;
 	padding: 0.75rem 1rem;
 	color: white;
 	text-align: center;
@@ -331,9 +331,9 @@ header .logo > img {
 	background-size: cover;
 	width: 100%;
 	height: 510px;
-		@media (max-width: 1200px) {
-			height: 250px;
-		}
+	@media (max-width: 1200px) {
+		height: 250px;
+	}
 }
 
 #contacts {
@@ -469,7 +469,7 @@ img.mask {
 			font-size: 16px;
 			border: 1px solid #dfe3e9;
 			border-radius: 4px;
-				&:focus {
+			&:focus {
 				border-color: #2ea2f8;
 			}
 		}
@@ -524,7 +524,7 @@ em {
 
 b, .b {
 	font-size: 2.3rem;
-  font-weight: bold;
+	font-weight: bold;
 	margin-bottom: 0.75rem;
 }
 
@@ -533,7 +533,7 @@ p {
 }
 .board {
 	position: relative;
-	background-image: url(../img/wallbrick.jpg);
+	background-image: url(../img/brickwall.jpg);
 }
 
 .features {
@@ -559,7 +559,7 @@ p {
 			}
 			.foes {
 				width: 63px;
-				background-image: svg-load('../../src/img/foes.svg');
+				background-image: svg-load('../img/foes.svg');
 			}
 			.secure {
 				width: 65px;
@@ -590,7 +590,7 @@ p {
 
 ul.arrow {
 	li {
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
 		display: flex;
 		align-items: center;
 		&:before {
@@ -610,4 +610,62 @@ section.blue_back {
 
 .stand_examples {
 	
+}
+
+section.partners {
+	.item {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.promo {
+			height: 350px;
+		&.mts {
+			background: url(../img/mts.png) center no-repeat;
+			background-size: contain;
+		}
+		&.bl {
+			background: url(../img/bl.png) center no-repeat;
+			background-size: contain;
+		}
+		&.rt {
+			background: url(../img/rt.png) center no-repeat;
+			background-size: contain;
+		}
+	}
+	
+	.item {
+		position: relative;
+		@media(max-width: 1200px) {
+			.promo {
+				height: 250px;
+			}
+		}
+		margin-bottom: 2rem;
+		padding: 1.5rem 0;
+		&::before {
+			position: absolute;
+			content: '';
+			left: 115px;
+			right: 0;
+			top:0;
+			bottom: 0;
+			border-radius: 20px;
+			box-shadow: 0 3px 12px 1px rgba(209, 209, 209, 0.5);
+			background-color: #f7faff;
+			z-index: -1;
+			@media(max-width: 1200px) {
+				left: 0;
+				top: 100px;
+			}
+		}
+		.text {
+			.f;
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+			h3 {
+				font-size: 2.4rem;
+			}
+			
+		}
+	}
 }
