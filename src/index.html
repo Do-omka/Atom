@@ -9,14 +9,18 @@
 </head>
 <body>
 	//= templates/header.html
-
+	
 	<main>
 		<section class='board'>
 			<div class='container'>
-				<div class='promo'></div>
-				<b class='col-xl-8'>Стань <em>заметнее</em> с помощью рекламы на подъездах домов</b>
-				<p>Здесь должен быть дополняющий текст к заголовку, который доносит чуть больше инфы.</p>
-				<button type='button' class='recall btn w-3'>Оставить заявку</button>
+				<div class='row'>
+					<div class='col-xl-8 f'>
+						<b>Стань <em>заметнее</em> с помощью рекламы на подъездах домов</b>
+						<p>Здесь должен быть дополняющий текст к заголовку, который доносит чуть больше инфы.</p>
+						<button type='button' class='recall btn w-3'>Оставить заявку</button>
+					</div>
+					<div class='promo col-xl-4'></div>
+				</div>
 			</div>
 		</section>
 		
@@ -53,12 +57,12 @@
 		<section class='stand_content'>
 			<div class='container'>
 				<div class='row'>
-					<div class='col-xl-6'>
-						<img src='' alt='stand' />
+					<div class='col-md-6 stand'>
+						<img src='../src/img/stand.jpg' alt='Фото стенда' width='471px' height='490px' />
 					</div>
-					<div class='col-xl-6'>
+					<div class='col-md-6 f'>
 						<h2>Из чего состоит стенд?</h2>
-						<ul>
+						<ul class='arrow'>
 							<li>Металлическая рама</li>
 							<li>Защитное стекло</li>
 							<li>Антивандальные винты</li>
@@ -71,15 +75,17 @@
 			</div>
 		</section>
 		
-		<section class='examples'>
+		<section class='stand_examples blue_back'>
 			<div class='container'>
 				<h2>Наши стенды в работе</h2>
-				<div class='col-xl-4'><img src='ex1.jpg' alt='example' /></div>
-				<div class='col-xl-4'><img src='ex2.jpg' alt='example' /></div>
-				<div class='col-xl-4'><img src='ex3.jpg' alt='example' /></div>
-				<div class='col-xl-4'><img src='ex4.jpg' alt='example' /></div>
-				<div class='col-xl-4'><img src='ex5.jpg' alt='example' /></div>
-				<div class='col-xl-4'><img src='ex6.jpg' alt='example' /></div>
+				<div class='row'>
+					<div class='col-xl-4 col-md-6'><img src='img/ex1.jpg' alt='Наш стенд' width='350' height='350' class='mask' /></div>
+					<div class='col-xl-4 col-md-6'><img src='img/ex2.jpg' alt='Наш стенд' width='350' height='350' class='mask' /></div>
+					<div class='col-xl-4 col-md-6'><img src='img/ex3.jpg' alt='Наш стенд' width='350' height='350' class='mask' /></div>
+					<div class='col-xl-4 col-md-6'><img src='img/ex4.jpg' alt='Наш стенд' width='350' height='350' class='mask' /></div>
+					<div class='col-xl-4 col-md-6'><img src='img/ex5.jpg' alt='Наш стенд' width='350' height='350' class='mask' /></div>
+					<div class='col-xl-4 col-md-6'><img src='img/ex6.jpg' alt='Наш стенд' width='350' height='350' class='mask' /></div>
+				</div>
 			</div>
 		</section>
 		
@@ -90,48 +96,48 @@
 					<div class='item'>
 						<div class='promo mts'></div>
 						<h3>МТС</h3>
-						<ul>
+						<ul class='arrow'>
 							<li>3 года сотрудничества</li>
 							<li>Больше 5 000 постоянно арендованных поверхностей</li>
 							<li>50 000 приведенных клиентов</li>
-						</ul>
-						<button type='button' class='recall btn w-4'>Хочу сотрудничать</button>
-					</div>
-					
-					<div class='item'>
-						<div class='promo bl'></div>
-						<h3>Билайн</h3>
-						<ul>
-							<li>5 лет сотрудничества</li>
-							<li>Больше 15 000 постоянно арендованных поверхностей</li>
-							<li>300 000 приведенных клиентов</li>
-						</ul>
-						<button type='button' class='recall btn w-4'>Хочу сотрудничать</button>
-					</div>
-					
-					<div class='item'>
-						<div class='promo rt'></div>
-						<h3>Ростелеком</h3>
-						<ul>
-							<li>7 лет сотрудничества</li>
-							<li>Больше 30 000 постоянно арендованных поверхностей</li>
-							<li>1 300 000 приведенных клиентов</li>
-						</ul>
-						<button type='button' class='recall btn w-4'>Хочу сотрудничать</button>
+							<ul/>
+							<button type='button' class='recall btn w-4'>Хочу сотрудничать</button>
+						</div>
+						
+						<div class='item'>
+							<div class='promo bl'></div>
+							<h3>Билайн</h3>
+							<ul class='arrow'>
+								<li>5 лет сотрудничества</li>
+								<li>Больше 15 000 постоянно арендованных поверхностей</li>
+								<li>300 000 приведенных клиентов</li>
+							</ul>
+							<button type='button' class='recall btn w-4'>Хочу сотрудничать</button>
+						</div>
+						
+						<div class='item'>
+							<div class='promo rt'></div>
+							<h3>Ростелеком</h3>
+							<ul class='arrow'>
+								<li>7 лет сотрудничества</li>
+								<li>Больше 30 000 постоянно арендованных поверхностей</li>
+								<li>1 300 000 приведенных клиентов</li>
+							</ul>
+							<button type='button' class='recall btn w-4'>Хочу сотрудничать</button>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-	</main>
-
-	//= templates/cities.html
-
-	//= templates/contacts.html
-
-	//= templates/footer.html
-	
-	//= templates/recall_popup.html
-	
-	<script type="text/javascript" src="js/main.js"></script>
-</body>
-</html>
+			</section>
+		</main>
+		
+		//= templates/cities.html
+		
+		//= templates/contacts.html
+		
+		//= templates/footer.html
+		
+		//= templates/recall_popup.html
+		
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+	</html>
