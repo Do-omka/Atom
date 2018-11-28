@@ -511,7 +511,7 @@ section.article {
 	}
 }
 
-.separate {
+section.separate {
 	padding-bottom: 2.25rem;
 	border-bottom: 6px solid #f7faff;
 }
@@ -532,8 +532,24 @@ p {
 	margin-bottom: 2rem;
 }
 .board {
+	.text {
+		.f;
+		align-self: center;
+	}
 	position: relative;
-	background-image: url(../img/brickwall.jpg);
+	background-image: url(../../src/img/brickwall.jpg);
+	background-size: cover;
+	.promo {
+		background: url(../../src/img/banner.png) no-repeat right;
+		background-size: contain;
+		height: 450px;
+		@media (max-width: 1200px) {
+			height: 250px;
+		}
+		@media (max-width: 576px) {
+			display: none;
+		}
+	}
 }
 
 .features {
