@@ -59,4 +59,47 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		}
 	})
 	
+//	slider
+
+let slider_position = 0;
+
+	let next = document.querySelectorAll('.next')
+	for (let i = 0; i < next.length; i++) {
+		next[i].addEventListener('click', (e)=> {
+			let slider = findAncestor(next[i], 'slider')
+			let active_slide = slider.querySelector('.article.active')
+			if (active_slide.nextElementSibling) {
+				active_slide.classList.remove('active')
+				active_slide.nextElementSibling.classList.add('active')
+				//move
+				let slides = slider.querySelectorAll('.article')
+				for (let j = 0; j < slides.length; j++) {
+					if (slides[j].classList.contains('active')) {
+						slider.querySelector('.slide').style.transform = 'translateX(-' + (j*active_slide.clientWidth).toString() + 'px)';
+					}
+				}
+			}
+		})
+	}
+	
+	let prev = document.querySelectorAll('.prev')
+	for (let i = 0; i < prev.length; i++) {
+		prev[i].addEventListener('click', (e)=> {
+			let slider = findAncestor(prev[i], 'slider')
+			let active_slide = slider.querySelector('.article.active')
+			if (active_slide.previousElementSibling) {
+				active_slide.classList.remove('active')
+				active_slide.previousElementSibling.classList.add('active')
+				//move
+				let slides = slider.querySelectorAll('.article')
+				for (let j = 0; j < slides.length; j++) {
+					if (slides[j].classList.contains('active')) {
+						slider.querySelector('.slide').style.transform = 'translateX(-' + (j*active_slide.clientWidth).toString() + 'px)';
+					}
+				}
+				
+			}
+		})
+	}
+	
 })
