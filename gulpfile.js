@@ -11,10 +11,12 @@ const
 	,del = require('del')
 	,rigger = require('gulp-rigger')
 	,babel = require('gulp-babel')
+	,retina = require('gulp-img-retina')
 
 function minhtml () {
 	return gulp.src('src/*.html')
 		.pipe(rigger())
+		.pipe(retina())
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('docs'))
 }
