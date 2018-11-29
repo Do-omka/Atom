@@ -632,6 +632,7 @@ ul.arrow {
 			height: 14px;
 			background-image: svg-load('../img/li.svg');
 			margin-right: 10px;
+			flex-shrink: 0;
 		}
 	}
 }
@@ -642,7 +643,20 @@ section.blue_back {
 }
 
 .stand_examples {
-	
+	.item {
+		.f;
+		align-items: center;
+		margin-bottom: 1.5rem;
+		transition: 0.2s;
+		&:hover {
+			transform: scale(1.2);
+			z-index: 1;
+		}
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 section.partners {
