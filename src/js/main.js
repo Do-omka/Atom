@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 	document.querySelector('body > header').style.marginTop = getComputedStyle(document.querySelector('body > header nav')).getPropertyValue('height')
 	
 	document.querySelector('body > header nav').style.position = 'fixed'
-	document.querySelector('body > header nav').style.zIndex = '1'
+	document.querySelector('body > header nav').style.zIndex = '2'
 	document.querySelector('body > header nav').style.top = '0'
 	document.querySelector('body > header nav').style.width = '100%'
 	
