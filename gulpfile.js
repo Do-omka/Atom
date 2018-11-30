@@ -29,12 +29,11 @@ function mincss () {
 		}))
 		.pipe(sourcemaps.identityMap())
 		.pipe(postcss([
-			require('postcss-svgo')
-			,require('postcss-font-magician')
+			require('postcss-font-magician')
 			,require('postcss-inline-svg')
+			,require('postcss-svgo')
 			,require('postcss-focus')
 			,require('autoprefixer')
-			,require('postcss-svgo')
 		]
 		,{syntax: require('postcss-less')}
 		))
@@ -42,7 +41,6 @@ function mincss () {
 		.pipe(less())
 		.pipe(postcss([
 			require('postcss-csso')
-			
 		]))
 		.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('docs/css'))
