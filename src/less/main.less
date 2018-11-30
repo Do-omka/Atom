@@ -237,7 +237,6 @@ body > header {
 				}
 				.select {
 					display: none;
-					
 				}
 			}
 			.f;
@@ -314,16 +313,25 @@ body > header {
 				// padding-top: 2rem;
 				// padding-bottom: 2rem;
 				margin-bottom: 2rem;
-			}
-			.col-xl-7 {
 				display: flex;
-				justify-content: space-between;
 				align-items: center;
-			}
-			.col-xl-3 {
-				.f;
-				justify-content: center;
-				align-items: flex-end;
+				&:last-child {
+					.f;
+					justify-content: center;
+					align-items: flex-end;
+				}
+				&.number {
+					display: flex;
+					justify-content: space-between;
+					@media (max-width: 1200px) {
+						flex-direction: column;
+						justify-content: center;
+						text-align: center;
+						span {
+							font-size: 1rem;
+						}
+					}
+				}
 			}
 		}
 		.recall {
@@ -337,6 +345,7 @@ body > header {
 	color: rgb(49, 64, 174);
 	word-wrap: break-word;
 }
+
 header .logo {
 	width: 100%;
 	.f;
