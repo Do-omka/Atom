@@ -16,7 +16,7 @@ const
 function minhtml () {
 	return gulp.src('src/*.html')
 		.pipe(rigger())
-		.pipe(retina())
+		//.pipe(retina())
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(gulp.dest('docs'))
 }
@@ -30,18 +30,19 @@ function mincss () {
 		.pipe(sourcemaps.identityMap())
 		.pipe(postcss([
 			require('postcss-svgo')
+			,require('postcss-font-magician')
+			,require('postcss-inline-svg')
+			,require('postcss-focus')
+			,require('autoprefixer')
+			,require('postcss-svgo')
 		]
 		,{syntax: require('postcss-less')}
 		))
 		.pipe(concat('main.css'))
 		.pipe(less())
 		.pipe(postcss([
-			require('postcss-font-magician')
-			,require('postcss-inline-svg')
-			,require('postcss-focus')
-			,require('autoprefixer')
-			,require('postcss-svgo')
-			,require('postcss-csso')
+			require('postcss-csso')
+			
 		]))
 		.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('docs/css'))
