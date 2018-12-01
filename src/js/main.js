@@ -60,9 +60,6 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 	})
 	
 //	slider
-
-let slider_position = 0;
-
 	let next = document.querySelectorAll('.next')
 	for (let i = 0; i < next.length; i++) {
 		next[i].addEventListener('click', (e)=> {
@@ -97,7 +94,6 @@ let slider_position = 0;
 						slider.querySelector('.slide').style.transform = 'translateX(-' + (j*active_slide.clientWidth).toString() + 'px)';
 					}
 				}
-				
 			}
 		})
 	}
