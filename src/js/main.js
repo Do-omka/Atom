@@ -49,13 +49,16 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 	document.querySelector('.city_select .select').addEventListener('click', (e)=> {
 		e.stopPropagation()
 	})
-	document.querySelector('.city_select').addEventListener('click', (e)=> {
+	document.querySelector('.city_select > p').addEventListener('click', (e)=> {
 		if (document.querySelector('.city_select').classList.contains('active')) {
 			document.querySelector('.city_select').classList.add('inactive')
 			document.querySelector('.city_select').classList.remove('active')
+			document.querySelector('.city_select .autocomplete-suggestions').style.display = 'none'
 		} else {
 			document.querySelector('.city_select').classList.add('active')
 			document.querySelector('.city_select').classList.remove('inactive')
+			document.querySelector('#city').select()
+			document.querySelector('#city').dispatchEvent(new Event('focus'))
 		}
 	})
 	
@@ -97,5 +100,25 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 			}
 		})
 	}
+	
+	//city select autocomplete
+	new autoComplete({
+		selector: '#city',
+		minChars: 0,
+		offsetLeft: -5,
+		offsetTop: 5,
+		source: function(term, suggest){
+			term = term.toLowerCase()
+			let choices = []
+			let cities = document.querySelectorAll('#cities li')
+			for (let i = 0; i < cities.length; i++) {
+				choices.push(cities[i].innerHTML)
+			}
+			let matches = [];
+			for (let i=0; i<choices.length; i++)
+			if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i])
+			suggest(matches)
+		}
+	})
 	
 })
