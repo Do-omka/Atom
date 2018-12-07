@@ -101,9 +101,7 @@ var autoComplete = (function(){
           var v = this.getAttribute('data-val');
           that.value = v;
           o.onSelect(e, v, this);
-          document.querySelector('.city_select > p').innerHTML = document.querySelector('#city').value;
-          document.querySelector('.city_select').classList.add('inactive');
-          document.querySelector('.city_select').classList.remove('active');
+          
           that.sc.style.display = 'none';
         }
       }, that.sc);
@@ -159,9 +157,7 @@ var autoComplete = (function(){
           var sel = that.sc.querySelector('.autocomplete-suggestion.selected');
           if (sel && that.sc.style.display != 'none') {
             o.onSelect(e, sel.getAttribute('data-val'), sel);
-            document.querySelector('.city_select > p').innerHTML = document.querySelector('#city').value;
-            document.querySelector('.city_select').classList.add('inactive');
-            document.querySelector('.city_select').classList.remove('active');
+            
             that.sc.style.display = 'none';
           }
         }

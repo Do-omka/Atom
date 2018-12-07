@@ -1,8 +1,53 @@
 document.addEventListener('DOMContentLoaded', (e)=> {
 	
+	function getCookie(name) {
+	  let matches = document.cookie.match(new RegExp(
+	    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+	  ));
+	  return matches ? decodeURIComponent(matches[1]) : undefined;
+	}
+
+	function setCookie(name, value, options) {
+	  options = options || {};
+		let expires = options.expires;
+
+	  if (typeof expires == "number" && expires) {
+	    let d = new Date();
+	    d.setDate(d.getDate() + expires);
+	    expires = options.expires = d;
+	  } else {
+			let d = new Date();
+	    d.setDate(d.getDate() + 30);
+	    expires = options.expires = d;
+		}
+		
+	  if (expires && expires.toUTCString) {
+	    options.expires = expires.toUTCString();
+	  }
+	  
+		console.log(options.expires)
+	  value = encodeURIComponent(value);
+	  
+	  let updatedCookie = name + "=" + value;
+	  
+	  for (let propName in options) {
+	    updatedCookie += "; " + propName;
+	    let propValue = options[propName];
+	    if (propValue !== true) {
+	      updatedCookie += "=" + propValue;
+	    }
+	  }
+	  document.cookie = updatedCookie;
+	}
+	
 	function findAncestor (el, cls) {
 		while ((el = el.parentElement) && !el.classList.contains(cls));
 		return el
+	}
+	
+	//get user's city from cookie
+	if (getCookie('user_city')!==undefined) {
+		 document.querySelector('.city_select > p').innerHTML = getCookie('user_city')
 	}
 	
 	// fixed header
@@ -57,8 +102,8 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		} else {
 			document.querySelector('.city_select').classList.add('active')
 			document.querySelector('.city_select').classList.remove('inactive')
-			document.querySelector('#city').select()
-			document.querySelector('#city').dispatchEvent(new Event('focus'))
+			document.querySelector('#user_city').select()
+			document.querySelector('#user_city').dispatchEvent(new Event('focus'))
 		}
 	})
 	
@@ -103,7 +148,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 	
 	//city select autocomplete
 	new autoComplete({
-		selector: '#city',
+		selector: '#user_city',
 		minChars: 0,
 		offsetLeft: -5,
 		offsetTop: 5,
@@ -118,6 +163,13 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 			for (let i=0; i<choices.length; i++)
 			if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i])
 			suggest(matches)
+		},
+		onSelect: function (event, term, item) {
+			document.querySelector('.city_select > p').innerHTML = term
+			setCookie('user_city', term)
+			document.querySelector('#user_city').value = ''
+			document.querySelector('.city_select').classList.add('inactive')
+			document.querySelector('.city_select').classList.remove('active')
 		}
 	})
 	
