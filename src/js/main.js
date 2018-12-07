@@ -112,10 +112,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		account_type_radio[i].parentElement.classList.add('active')
 		})
 	}
-	
-	//something went wrong
-	
-	
+
 	// city select drop down
 	document.querySelector('.city_select .select').addEventListener('click', (e)=> {
 		e.stopPropagation()
@@ -203,6 +200,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 	document.querySelector("#login_popup form [type='submit']").addEventListener('click', (e)=> {
 		document.querySelector('#warning_popup').classList.add('active')
 		document.querySelector('#warning_popup').classList.remove('inactive')
-		return false
+		document.querySelector('#login_popup').classList.add('inactive')
+		document.querySelector('#login_popup').classList.remove('active')
 	})
 })
