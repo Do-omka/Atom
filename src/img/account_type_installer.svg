@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>F28A3E7A-05AA-4322-9E6D-2BC8942CDAF7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Вход-в-лк" transform="translate(-904.000000, -233.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1118" height="856"></rect>
+            <g id="Group-2-Copy" transform="translate(884.000000, 223.000000)" fill="#006DF0">
+                <g id="Group" transform="translate(20.000000, 10.000000)">
+                    <path d="M12.5,18 C10.455,18 8.6325,16.8588 7.87375,15.6 L17.1375,15.6 C16.39875,16.8624 14.605,18 12.5,18 M18.75,13.2 L6.25,13.2 C5.56,13.2 5,13.7376 5,14.4 C5,17.5404 8.575,20.4 12.5,20.4 C16.425,20.4 20,17.5404 20,14.4 C20,13.7376 19.44,13.2 18.75,13.2" id="Fill-2846"></path>
+                    <path d="M12.5,21.6 C6.98625,21.6 2.5,17.2932 2.5,12 C2.5,6.7068 6.98625,2.4 12.5,2.4 C18.01375,2.4 22.5,6.7068 22.5,12 C22.5,17.2932 18.01375,21.6 12.5,21.6 M12.5,0 C5.6075,0 0,5.3832 0,12 C0,18.618 5.6075,24 12.5,24 C19.3925,24 25,18.618 25,12 C25,5.3832 19.3925,0 12.5,0" id="Fill-2847"></path>
+                    <polygon id="Fill-2848" points="10 6 7.5 6 7.5 10.8 10 10.8"></polygon>
+                    <polygon id="Fill-2849" points="17.5 6 15 6 15 10.8 17.5 10.8"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

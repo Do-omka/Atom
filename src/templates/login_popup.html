@@ -1,0 +1,37 @@
+<div class='popup inactive' id='login_popup'>
+	<div class='container'>
+		<span class='close'></span>
+		<h2>Вход в личный кабинет</h2>
+		<form action='' class='container'>
+			<span>Я</span>
+			<div class='account_type'>
+				<label>
+					<input type='radio' name='account_type' value='Клиент' required />
+					<span class='icon client'></span>
+					<span>Клиент</span>
+				</label>
+				
+				<label>
+					<input type='radio' name='account_type' value='Монтажник' required />
+					<span class='icon installer'></span>
+					<span>Монтажник</span>
+				</label>
+				<label>
+					<input type='radio' name='account_type' value='Модератор' required />
+					<span class='icon moderator'></span>
+					<span>Модератор</span>
+				</label>
+			</div>
+			
+			<label>
+				<span>Логин</span>
+				<input type='text' required />
+			</label>
+			<label>
+				<span>Пароль</span>
+				<input type='text' required />
+			</label>
+			<button class='btn'>Войти</button>
+		</form>
+	</div>
+</div>

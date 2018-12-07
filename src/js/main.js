@@ -2,42 +2,40 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 	
 	function getCookie(name) {
 	  let matches = document.cookie.match(new RegExp(
-	    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-	  ));
-	  return matches ? decodeURIComponent(matches[1]) : undefined;
+	    '(?:^|; )' + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)'
+	  ))
+	  return matches ? decodeURIComponent(matches[1]) : undefined
 	}
 
 	function setCookie(name, value, options) {
-	  options = options || {};
-		let expires = options.expires;
+	  options = options || {}
+		let expires = options.expires
 
-	  if (typeof expires == "number" && expires) {
-	    let d = new Date();
-	    d.setDate(d.getDate() + expires);
-	    expires = options.expires = d;
+	  if (typeof expires == 'number' && expires) {
+	    let d = new Date()
+	    d.setDate(d.getDate() + expires)
+	    expires = options.expires = d
 	  } else {
-			let d = new Date();
-	    d.setDate(d.getDate() + 30);
-	    expires = options.expires = d;
+			let d = new Date()
+	    d.setDate(d.getDate() + 30)
+	    expires = options.expires = d
 		}
-		
 	  if (expires && expires.toUTCString) {
-	    options.expires = expires.toUTCString();
+	    options.expires = expires.toUTCString()
 	  }
+		
+	  value = encodeURIComponent(value)
 	  
-		console.log(options.expires)
-	  value = encodeURIComponent(value);
-	  
-	  let updatedCookie = name + "=" + value;
+	  let updatedCookie = name + '=' + value
 	  
 	  for (let propName in options) {
-	    updatedCookie += "; " + propName;
-	    let propValue = options[propName];
+	    updatedCookie += '; ' + propName
+	    let propValue = options[propName]
 	    if (propValue !== true) {
-	      updatedCookie += "=" + propValue;
+	      updatedCookie += '=' + propValue
 	    }
 	  }
-	  document.cookie = updatedCookie;
+	  document.cookie = updatedCookie
 	}
 	
 	function findAncestor (el, cls) {
@@ -67,6 +65,15 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		})
 	}
 	
+	// login popup
+	let login = document.querySelectorAll('.login')
+	for (let i = 0; i < login.length; i++) {
+		login[i].addEventListener('click', (e)=> {
+			document.getElementById('login_popup').classList.add('active')
+			document.getElementById('login_popup').classList.remove('inactive')
+		})
+	}
+	
 	// close buttons
 	let close = document.querySelectorAll('.close')
 	for (let i = 0; i < close.length; i++) {
@@ -77,7 +84,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		})
 	}
 	
-	//close popup on click outside
+	// close popup on click outside
 	let popup_close = document.querySelectorAll('.popup')
 	for (let i = 0; i < popup_close.length; i++) {
 		popup_close[i].addEventListener('click', (e)=> {
@@ -86,9 +93,28 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		})
 	}
 	
-	document.querySelector('.popup form').addEventListener('click', (e)=> {
-		e.stopPropagation()
-	})
+	let popup_form = document.querySelectorAll('.popup .container')
+	for (let i = 0; i < popup_form.length; i++) {
+		popup_form[i].addEventListener('click', (e)=> {
+			e.stopPropagation()
+		})
+	}
+	
+	// account_type_check
+	let account_type_radio = document.querySelectorAll(".account_type input[type='radio']")
+	for (let i = 0; i < account_type_radio.length; i++) {
+		account_type_radio[i].addEventListener('change', (e)=> {
+			for (let j = 0; j < account_type_radio.length; j++) {
+				if (j!== i) {
+					account_type_radio[j].parentElement.classList.remove('active')
+				}
+			}
+		account_type_radio[i].parentElement.classList.add('active')
+		})
+	}
+	
+	//something went wrong
+	
 	
 	// city select drop down
 	document.querySelector('.city_select .select').addEventListener('click', (e)=> {
@@ -120,7 +146,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 				let slides = slider.querySelectorAll('.article')
 				for (let j = 0; j < slides.length; j++) {
 					if (slides[j].classList.contains('active')) {
-						slider.querySelector('.slide').style.transform = 'translateX(-' + (j*active_slide.clientWidth).toString() + 'px)';
+						slider.querySelector('.slide').style.transform = 'translateX(-' + (j*active_slide.clientWidth).toString() + 'px)'
 					}
 				}
 			}
@@ -139,7 +165,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 				let slides = slider.querySelectorAll('.article')
 				for (let j = 0; j < slides.length; j++) {
 					if (slides[j].classList.contains('active')) {
-						slider.querySelector('.slide').style.transform = 'translateX(-' + (j*active_slide.clientWidth).toString() + 'px)';
+						slider.querySelector('.slide').style.transform = 'translateX(-' + (j*active_slide.clientWidth).toString() + 'px)'
 					}
 				}
 			}
@@ -159,7 +185,7 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 			for (let i = 0; i < cities.length; i++) {
 				choices.push(cities[i].innerHTML)
 			}
-			let matches = [];
+			let matches = []
 			for (let i=0; i<choices.length; i++)
 			if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i])
 			suggest(matches)
