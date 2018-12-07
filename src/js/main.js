@@ -199,4 +199,10 @@ document.addEventListener('DOMContentLoaded', (e)=> {
 		}
 	})
 	
+	// warning popup
+	document.querySelector("#login_popup form [type='submit']").addEventListener('click', (e)=> {
+		document.querySelector('#warning_popup').classList.add('active')
+		document.querySelector('#warning_popup').classList.remove('inactive')
+		return false
+	})
 })
