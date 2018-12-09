@@ -43,13 +43,13 @@ function mincss () {
 		))
 		.pipe(concat('main.css'))
 		.pipe(less())
-		.pipe(postcss([
-			require('css-mqpacker')({
-	    sort: true
-	  	})
-			,require('postcss-mq-last')
-			,require('postcss-csso')
-		]))
+		// .pipe(postcss([
+		// 	require('css-mqpacker')({
+	  //   sort: true
+	  // 	})
+		// 	,require('postcss-mq-last')
+		// 	,require('postcss-csso')
+		// ]))
 		.pipe(sourcemaps.write(''))
 		.pipe(gulp.dest('docs/css'))
 }
