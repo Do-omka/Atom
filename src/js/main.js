@@ -1,3 +1,8 @@
+window.addEventListener('resize', (e)=> {
+	// fixed header margin size change
+	document.querySelector('body > header').style.marginTop = getComputedStyle(document.querySelector('body > header nav')).getPropertyValue('height')
+})
+
 document.addEventListener('DOMContentLoaded', (e)=> {
 	
 	function getCookie(name) {
