@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 51 (57462) - http://www.bohemiancoding.com/sketch -->
-    <title>A40A65B5-5472-4A26-89F0-2504EFB50D3E</title>
-    <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Вход-в-лк" transform="translate(-904.000000, -305.000000)">
-            <rect fill="#FFFFFF" x="0" y="0" width="1118" height="856"></rect>
-            <g id="Group-Copy-3" transform="translate(904.000000, 305.000000)" fill="#006DF0">
-                <path d="M8.75,10.8 C10.13,10.8 11.25,9.7248 11.25,8.4 L6.25,8.4 C6.25,9.7248 7.37,10.8 8.75,10.8" id="Fill-2825"></path>
-                <path d="M16.25,10.8 C17.63,10.8 18.75,9.7248 18.75,8.4 L13.75,8.4 C13.75,9.7248 14.87,10.8 16.25,10.8" id="Fill-2826"></path>
-                <path d="M12.5,21.6 C6.98625,21.6 2.5,17.2932 2.5,12 C2.5,6.7068 6.98625,2.4 12.5,2.4 C18.01375,2.4 22.5,6.7068 22.5,12 C22.5,17.2932 18.01375,21.6 12.5,21.6 M12.5,0 C5.6075,0 0,5.3832 0,12 C0,18.618 5.6075,24 12.5,24 C19.3925,24 25,18.618 25,12 C25,5.3832 19.3925,0 12.5,0" id="Fill-2827"></path>
-                <path d="M12.5,16.8 C10.915,16.8 9.4575,16.1016 8.50125,14.8824 L6.50375,16.326 C7.9375,18.1536 10.1225,19.2 12.5,19.2 C14.88125,19.2 17.06875,18.1512 18.5,16.3212 L16.5,14.8788 C15.54625,16.1004 14.0875,16.8 12.5,16.8" id="Fill-2828"></path>
-            </g>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 25 24" style="enable-background:new 0 0 25 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#006DF0;}
+</style>
+<title>Group</title>
+<desc>Created with Sketch.</desc>
+<g id="Сбор-заявок" transform="translate(38.000000, 40.000000)">
+	<g id="Group" transform="translate(400.000000, 120.000000)">
+		<path id="Fill-2825" class="st0" d="M-429.2-149.2c1.4,0,2.5-1.1,2.5-2.4h-5C-431.8-150.3-430.6-149.2-429.2-149.2"/>
+		<path id="Fill-2826" class="st0" d="M-421.8-149.2c1.4,0,2.5-1.1,2.5-2.4h-5C-424.2-150.3-423.1-149.2-421.8-149.2"/>
+		<path id="Fill-2827" class="st0" d="M-425.5-138.4c-5.5,0-10-4.3-10-9.6s4.5-9.6,10-9.6s10,4.3,10,9.6S-420-138.4-425.5-138.4
+			 M-425.5-160c-6.9,0-12.5,5.4-12.5,12c0,6.6,5.6,12,12.5,12s12.5-5.4,12.5-12C-413-154.6-418.6-160-425.5-160"/>
+		<path id="Fill-2828" class="st0" d="M-425.5-143.2c-1.6,0-3-0.7-4-1.9l-2,1.4c1.4,1.8,3.6,2.9,6,2.9c2.4,0,4.6-1,6-2.9l-2-1.4
+			C-422.5-143.9-423.9-143.2-425.5-143.2"/>
+	</g>
+</g>
 </svg>
