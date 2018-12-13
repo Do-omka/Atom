@@ -2427,17 +2427,19 @@ img.mask {
   content: ' ';
   height: 2px;
   width: 15px;
-  background-color: #333;
+  background-color: #9b9b9b;
 }
 .popup .close:before {
+  top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0) rotate(45deg);
-  transform: translate(-50%, 0) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .popup .close:after {
+  top: 50%;
   right: 50%;
-  -webkit-transform: translate(50%, 0) rotate(-45deg);
-  transform: translate(50%, 0) rotate(-45deg);
+  -webkit-transform: translate(50%, -50%) rotate(-45deg);
+  transform: translate(50%, -50%) rotate(-45deg);
 }
 .popup .wrong {
   font-size: 1rem;
