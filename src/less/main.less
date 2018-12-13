@@ -596,8 +596,21 @@ img.mask {
 			}
 			&.active {
 				background-color: rgb(0, 109, 240);
+				
 				span {
 					color: white;
+				}
+				
+				.icon {
+					&.client {
+						background-image: svg-load('../img/account_type_client-active.svg');
+					}
+					&.installer {
+						background-image: svg-load('../img/account_type_installer-active.svg');
+					}
+					&.moderator {
+						background-image: svg-load('../img/account_type_moderator-active.svg');
+					}
 				}
 			}
 			

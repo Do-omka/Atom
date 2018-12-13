@@ -2500,6 +2500,15 @@ img.mask {
 #login_popup .account_type label.active span {
   color: white;
 }
+#login_popup .account_type label.active .icon.client {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' id='Слой_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 25 24' xml:space='preserve'%3E%3Cstyle%3E.st0{fill:%23fff}%3C/style%3E%3Cg id='Сбор-заявок' transform='translate(38 40)'%3E%3Cg id='Group' transform='translate(210 120)'%3E%3Cpath id='Fill-2817' class='st0' d='M-239.5-149c.2-.1 2.5-.7 2.5-2.8 0-1.3-1.9-1.8-2.5-.2-.6-1.7-2.5-1.1-2.5.2 0 2.1 2.5 2.8 2.5 2.8'/%3E%3Cpath id='Fill-2818' class='st0' d='M-231.5-152c-.6-1.7-2.5-1.1-2.5.2 0 2.1 2.5 2.8 2.5 2.8.2-.1 2.5-.7 2.5-2.8 0-1.3-1.9-1.8-2.5-.2'/%3E%3Cpath id='Fill-2819' class='st0' d='M-235.5-138.4c-5.5 0-10-4.3-10-9.6s4.5-9.6 10-9.6 10 4.3 10 9.6-4.5 9.6-10 9.6m0-21.6c-6.9 0-12.5 5.4-12.5 12s5.6 12 12.5 12 12.5-5.4 12.5-12-5.6-12-12.5-12'/%3E%3Cpath id='Fill-2820' class='st0' d='M-235.5-144.2c-1.7 0-3.3-.6-4.3-1.8l-2.2 1.3c1.6 1.7 3.9 2.7 6.5 2.7s5-1 6.5-2.7l-2.2-1.3c-1 1.1-2.6 1.8-4.3 1.8'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#login_popup .account_type label.active .icon.installer {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' id='Слой_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 25 24' xml:space='preserve'%3E%3Cstyle%3E.st0{fill:%23fff}%3C/style%3E%3Cg id='Сбор-заявок' transform='translate(38 40)'%3E%3Cg id='Group' transform='translate(305 120)'%3E%3Cpath id='Fill-2846' class='st0' d='M-330.5-142c-2 0-3.9-1.1-4.6-2.4h9.3c-.8 1.3-2.6 2.4-4.7 2.4m6.3-4.8h-12.5c-.7 0-1.2.5-1.2 1.2 0 3.1 3.6 6 7.5 6s7.5-2.9 7.5-6c-.1-.7-.7-1.2-1.3-1.2'/%3E%3Cpath id='Fill-2847' class='st0' d='M-330.5-138.4c-5.5 0-10-4.3-10-9.6s4.5-9.6 10-9.6 10 4.3 10 9.6-4.5 9.6-10 9.6m0-21.6c-6.9 0-12.5 5.4-12.5 12s5.6 12 12.5 12 12.5-5.4 12.5-12-5.6-12-12.5-12'/%3E%3Cpath id='Fill-2848' class='st0' d='M-333-154h-2.5v4.8h2.5z'/%3E%3Cpath id='Fill-2849' class='st0' d='M-325.5-154h-2.5v4.8h2.5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#login_popup .account_type label.active .icon.moderator {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg version='1.1' id='Слой_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 25 24' xml:space='preserve'%3E%3Cstyle%3E.st0{fill:%23fff}%3C/style%3E%3Cg id='Сбор-заявок' transform='translate(38 40)'%3E%3Cg id='Group' transform='translate(400 120)'%3E%3Cpath id='Fill-2825' class='st0' d='M-429.2-149.2c1.4 0 2.5-1.1 2.5-2.4h-5c-.1 1.3 1.1 2.4 2.5 2.4'/%3E%3Cpath id='Fill-2826' class='st0' d='M-421.8-149.2c1.4 0 2.5-1.1 2.5-2.4h-5c.1 1.3 1.2 2.4 2.5 2.4'/%3E%3Cpath id='Fill-2827' class='st0' d='M-425.5-138.4c-5.5 0-10-4.3-10-9.6s4.5-9.6 10-9.6 10 4.3 10 9.6-4.5 9.6-10 9.6m0-21.6c-6.9 0-12.5 5.4-12.5 12s5.6 12 12.5 12 12.5-5.4 12.5-12-5.6-12-12.5-12'/%3E%3Cpath id='Fill-2828' class='st0' d='M-425.5-143.2c-1.6 0-3-.7-4-1.9l-2 1.4c1.4 1.8 3.6 2.9 6 2.9s4.6-1 6-2.9l-2-1.4c-1 1.2-2.4 1.9-4 1.9'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
 #login_popup .account_type label input[type='radio'] {
   display: none;
 }
